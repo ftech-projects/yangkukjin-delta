@@ -1,0 +1,38 @@
+﻿
+1.0.0.1
+ - 010_formInitialize : 역삽입 모듈 검출 기능 추가 - CheckReveseConnection()
+
+1.0.0.2
+ - 490_formPdoToStruct 추가
+ - 900_formEC04H 추가
+
+ 1.0.0.3
+ - 910_formMC02P 추가
+
+ 1.0.0.4
+ - MC02P Homing, State, Setup 추가
+
+ 1.0.0.5
+ - MC02P 이송명령이 간헐적으로 무시되는 버그 수정
+
+ 1.0.0.6
+ - 800_formGCode 추가
+
+ 1.0.0.7
+ - MC02P IxLine 추가
+
+ 1.0.0.8
+ - PdoToStruct (InPDO) 추가
+
+ 1.0.0.9
+ - formDIO DoPutOne_L, DoPutMulti, DoPutMulti_L 추가
+
+ 1.0.1.0
+ - formSx SetRPM 추가
+
+ 1.0.1.1
+ - CookBook 추가
+ - SxPDO 추가
+
+ 1.0.1.2
+ - formCoeSdo HexString 처리 추가

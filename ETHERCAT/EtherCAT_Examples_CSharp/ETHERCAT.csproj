@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{92D97C7F-A143-4C6C-A747-53C884AA0F51}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EtherCAT_Examples_CSharp</RootNamespace>
+    <AssemblyName>EtherCAT_Examples_CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComiLib, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\ComiLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="950_formSxPDO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="950_formSxPDO.Designer.cs">
+      <DependentUpon>950_formSxPDO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="010_formInitialize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="010_formInitialize.Designer.cs">
+      <DependentUpon>010_formInitialize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01_formMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01_formMain.Designer.cs">
+      <DependentUpon>01_formMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="990_CookBook_10.cs" />
+    <Compile Include="800_formGCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="800_formGCode.Designer.cs">
+      <DependentUpon>800_formGCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="910_formMC02P.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="910_formMC02P.Designer.cs">
+      <DependentUpon>910_formMC02P.cs</DependentUpon>
+    </Compile>
+    <Compile Include="900_formEC04H.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="900_formEC04H.Designer.cs">
+      <DependentUpon>900_formEC04H.cs</DependentUpon>
+    </Compile>
+    <Compile Include="140_formAutoTorque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="140_formAutoTorque.Designer.cs">
+      <DependentUpon>140_formAutoTorque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="060_formCorr1D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="060_formCorr1D.Designer.cs">
+      <DependentUpon>060_formCorr1D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="380_formAio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="380_formAio.Designer.cs">
+      <DependentUpon>380_formAio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="370_formDiLatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="370_formDiLatch.Designer.cs">
+      <DependentUpon>370_formDiLatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="360_formDio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="360_formDio.Designer.cs">
+      <DependentUpon>360_formDio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="350_formCoeSdo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="350_formCoeSdo.Designer.cs">
+      <DependentUpon>350_formCoeSdo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="270_formHEmg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="270_formHEmg.Designer.cs">
+      <DependentUpon>270_formHEmg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="090_formRingCounter_Absolute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="090_formRingCounter_Absolute.Designer.cs">
+      <DependentUpon>090_formRingCounter_Absolute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="260_formSEmg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="260_formSEmg.Designer.cs">
+      <DependentUpon>260_formSEmg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="320_formOverride.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="320_formOverride.Designer.cs">
+      <DependentUpon>320_formOverride.cs</DependentUpon>
+    </Compile>
+    <Compile Include="290_formZVIS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="290_formZVIS.Designer.cs">
+      <DependentUpon>290_formZVIS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="330_formTouchProbe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="330_formTouchProbe.Designer.cs">
+      <DependentUpon>330_formTouchProbe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="100_formSyncAxis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="100_formSyncAxis.Designer.cs">
+      <DependentUpon>100_formSyncAxis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="190_formSpline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="190_formSpline.Designer.cs">
+      <DependentUpon>190_formSpline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="130_formTorque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="130_formTorque.Designer.cs">
+      <DependentUpon>130_formTorque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="150_formMultiTorque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="150_formMultiTorque.Designer.cs">
+      <DependentUpon>150_formMultiTorque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="250_formPtMotion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="250_formPtMotion.Designer.cs">
+      <DependentUpon>250_formPtMotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="200_formIxMpr2x.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="200_formIxMpr2x.Designer.cs">
+      <DependentUpon>200_formIxMpr2x.cs</DependentUpon>
+    </Compile>
+    <Compile Include="210_formIxVia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="210_formIxVia.Designer.cs">
+      <DependentUpon>210_formIxVia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="240_formListMotion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="240_formListMotion.Designer.cs">
+      <DependentUpon>240_formListMotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="280_formColla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="280_formColla.Designer.cs">
+      <DependentUpon>280_formColla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="230_formMasterSlave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="230_formMasterSlave.Designer.cs">
+      <DependentUpon>230_formMasterSlave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="120_formSD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="120_formSD.Designer.cs">
+      <DependentUpon>120_formSD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="080_formRingCounter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="080_formRingCounter.Designer.cs">
+      <DependentUpon>080_formRingCounter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="110_formExtStop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="110_formExtStop.Designer.cs">
+      <DependentUpon>110_formExtStop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="310_formCmpCont.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="310_formCmpCont.Designer.cs">
+      <DependentUpon>310_formCmpCont.cs</DependentUpon>
+    </Compile>
+    <Compile Include="300_formCmpOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="300_formCmpOne.Designer.cs">
+      <DependentUpon>300_formCmpOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="180_formIxArc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="180_formIxArc.Designer.cs">
+      <DependentUpon>180_formIxArc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="170_formIxLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="170_formIxLine.Designer.cs">
+      <DependentUpon>170_formIxLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="160_formMxMot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="160_formMxMot.Designer.cs">
+      <DependentUpon>160_formMxMot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="00_formBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="00_formBase.Designer.cs">
+      <DependentUpon>00_formBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="220_formHoming.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="220_formHoming.Designer.cs">
+      <DependentUpon>220_formHoming.cs</DependentUpon>
+    </Compile>
+    <Compile Include="030_formSxMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="030_formSxMove.Designer.cs">
+      <DependentUpon>030_formSxMove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="050_formSxStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="050_formSxStatus.Designer.cs">
+      <DependentUpon>050_formSxStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="490_formPdoToStruct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="490_formPdoToStruct.Designer.cs">
+      <DependentUpon>490_formPdoToStruct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Lib\ComiECAT.cs" />
+    <Compile Include="Lib\ComiECAT_adv.cs" />
+    <Compile Include="Lib\ComiECAT_Def.cs" />
+    <Compile Include="Lib\ComiECAT_Def_Net.cs" />
+    <Compile Include="Lib\Slaves.cs" />
+    <Compile Include="MAIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAIN.Designer.cs">
+      <DependentUpon>MAIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="950_formSxPDO.resx">
+      <DependentUpon>950_formSxPDO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="010_formInitialize.resx">
+      <DependentUpon>010_formInitialize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_formMain.resx">
+      <DependentUpon>01_formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="800_formGCode.resx">
+      <DependentUpon>800_formGCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="910_formMC02P.resx">
+      <DependentUpon>910_formMC02P.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="900_formEC04H.resx">
+      <DependentUpon>900_formEC04H.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="140_formAutoTorque.resx">
+      <DependentUpon>140_formAutoTorque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="060_formCorr1D.resx">
+      <DependentUpon>060_formCorr1D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="380_formAio.resx">
+      <DependentUpon>380_formAio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="370_formDiLatch.resx">
+      <DependentUpon>370_formDiLatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="360_formDio.resx">
+      <DependentUpon>360_formDio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="350_formCoeSdo.resx">
+      <DependentUpon>350_formCoeSdo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="270_formHEmg.resx">
+      <DependentUpon>270_formHEmg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="090_formRingCounter_Absolute.resx">
+      <DependentUpon>090_formRingCounter_Absolute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="260_formSEmg.resx">
+      <DependentUpon>260_formSEmg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="320_formOverride.resx">
+      <DependentUpon>320_formOverride.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="290_formZVIS.resx">
+      <DependentUpon>290_formZVIS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="330_formTouchProbe.resx">
+      <DependentUpon>330_formTouchProbe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="100_formSyncAxis.resx">
+      <DependentUpon>100_formSyncAxis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="190_formSpline.resx">
+      <DependentUpon>190_formSpline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="130_formTorque.resx">
+      <DependentUpon>130_formTorque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="150_formMultiTorque.resx">
+      <DependentUpon>150_formMultiTorque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="250_formPtMotion.resx">
+      <DependentUpon>250_formPtMotion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="200_formIxMpr2x.resx">
+      <DependentUpon>200_formIxMpr2x.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="210_formIxVia.resx">
+      <DependentUpon>210_formIxVia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="240_formListMotion.resx">
+      <DependentUpon>240_formListMotion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="280_formColla.resx">
+      <DependentUpon>280_formColla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="230_formMasterSlave.resx">
+      <DependentUpon>230_formMasterSlave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="120_formSD.resx">
+      <DependentUpon>120_formSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="080_formRingCounter.resx">
+      <DependentUpon>080_formRingCounter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="110_formExtStop.resx">
+      <DependentUpon>110_formExtStop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="310_formCmpCont.resx">
+      <DependentUpon>310_formCmpCont.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="300_formCmpOne.resx">
+      <DependentUpon>300_formCmpOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="180_formIxArc.resx">
+      <DependentUpon>180_formIxArc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="170_formIxLine.resx">
+      <DependentUpon>170_formIxLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="160_formMxMot.resx">
+      <DependentUpon>160_formMxMot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="00_formBase.resx">
+      <DependentUpon>00_formBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="220_formHoming.resx">
+      <DependentUpon>220_formHoming.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="030_formSxMove.resx">
+      <DependentUpon>030_formSxMove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="050_formSxStatus.resx">
+      <DependentUpon>050_formSxStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="490_formPdoToStruct.resx">
+      <DependentUpon>490_formPdoToStruct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAIN.resx">
+      <DependentUpon>MAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ChangeLog.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

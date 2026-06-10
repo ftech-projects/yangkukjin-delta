@@ -1,0 +1,17 @@
+# 대용량 설치파일
+*.zip
+*.7z
+
+# 외부 라이브러리 매뉴얼 (저작권)
+*.pdf
+
+# 민감 서류 (사업자등록증, 통장사본 등)
+Email/
+
+# Visual Studio 캐시/빌드 출력
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.cache

@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Basler.Pylon">
+      <HintPath>..\Basler.Pylon.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebra.AuroraImagingLibrary">
+      <HintPath>..\Zebra.AuroraImagingLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
